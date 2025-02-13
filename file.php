@@ -1,7 +1,7 @@
 <?php
 include 'db_connect.php'; // Include the connection
 
-// uncomment the below for error log
+// uncomment the below for error log Tarun is great
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
