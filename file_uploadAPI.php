@@ -3,8 +3,6 @@
 include 'db_connect.php'; // Include the connection
 
 
-
-
 function uploadImage($pdo, $imageType)
 {
     if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
