@@ -46,7 +46,7 @@
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.error) { // Check for errors returned by the PHP script\
                     console.error('PHP Error:', data.error);
                     const table = document.getElementById('imageTable');
