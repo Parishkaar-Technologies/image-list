@@ -1,0 +1,157 @@
+[11-Feb-2025 13:57:53 UTC] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:57:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('your_host', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:57:59 UTC] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:57:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('your_host', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:58:24 UTC] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:58:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for your_host failed: Name or service not known in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('your_host', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:58:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'affiadmin_Tarun'@'localhost' (using password: YES) in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('localhost', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:58:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'affiadmin_Tarun'@'localhost' (using password: YES) in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('localhost', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:58:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'affiadmin_Tarun'@'localhost' (using password: YES) in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('localhost', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 13:59:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'affiadmin_Tarun'@'localhost' (using password: YES) in /home/affiadmin/public_html/a1db-v1/file.php:4
+Stack trace:
+#0 /home/affiadmin/public_html/a1db-v1/file.php(4): mysqli->__construct('localhost', 'affiadmin_Tarun', Object(SensitiveParameterValue), 'affiadmin_a1DB')
+#1 {main}
+  thrown in /home/affiadmin/public_html/a1db-v1/file.php on line 4
+[11-Feb-2025 14:13:09 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 104
+[11-Feb-2025 14:13:09 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 125
+[11-Feb-2025 14:15:39 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 104
+[11-Feb-2025 14:15:39 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 125
+[11-Feb-2025 14:15:41 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 104
+[11-Feb-2025 14:15:41 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 125
+[11-Feb-2025 14:16:46 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 104
+[11-Feb-2025 14:16:46 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 125
+[11-Feb-2025 14:19:11 UTC] PHP Warning:  Undefined variable $uploadOk in /home/affiadmin/public_html/a1db-v1/file.php on line 28
+[11-Feb-2025 14:19:11 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 104
+[11-Feb-2025 14:19:11 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db-v1/file.php on line 125
+[11-Feb-2025 14:30:55 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v1/file.php on line 104
+[11-Feb-2025 14:30:55 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v1/file.php on line 125
+[11-Feb-2025 14:40:35 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 116
+[11-Feb-2025 14:40:35 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 137
+[11-Feb-2025 14:40:39 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 116
+[11-Feb-2025 14:40:39 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 137
+[11-Feb-2025 14:45:21 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 142
+[11-Feb-2025 14:45:21 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 163
+[11-Feb-2025 14:46:20 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:46:20 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpc5ozmZ&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:46:20 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 142
+[11-Feb-2025 14:46:20 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 163
+[11-Feb-2025 14:54:30 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:54:30 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpG1dHZC&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:54:30 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:54:30 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 14:55:03 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:03 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/php5i6Uks&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:03 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:55:03 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 14:55:13 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:13 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpF0Y0pY&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:13 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:55:13 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 14:55:21 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:55:21 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 14:55:29 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:29 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpirMdxd&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:55:29 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:55:29 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 14:57:02 UTC] PHP Warning:  move_uploaded_file(a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg): Failed to open stream: No such file or directory in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:57:02 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpYhwOlK&quot; to &quot;a1db/raw_images/WhatsApp Image 2025-02-11 at 10.17.49.jpeg&quot; in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 43
+[11-Feb-2025 14:57:02 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 110
+[11-Feb-2025 14:57:02 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 131
+[11-Feb-2025 15:15:45 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 141
+[11-Feb-2025 15:15:45 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 162
+[11-Feb-2025 15:18:22 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 141
+[11-Feb-2025 15:18:22 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 162
+[11-Feb-2025 15:20:35 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 142
+[11-Feb-2025 15:20:35 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 163
+[11-Feb-2025 15:23:34 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 142
+[11-Feb-2025 15:23:34 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 163
+[11-Feb-2025 15:34:44 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 15:37:48 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 15:41:45 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 15:42:40 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 17:03:56 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 18:33:45 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 18:34:14 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 23:32:57 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[11-Feb-2025 23:43:12 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 172
+[12-Feb-2025 00:13:38 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 172
+[12-Feb-2025 00:38:03 UTC] PHP Parse error:  Unclosed '{' on line 9 in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 222
+[12-Feb-2025 00:38:11 UTC] PHP Parse error:  Unclosed '{' on line 9 in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 222
+[12-Feb-2025 00:40:31 UTC] PHP Parse error:  Unclosed '{' on line 10 in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 223
+[12-Feb-2025 00:54:03 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 177
+[12-Feb-2025 00:57:50 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 00:59:31 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:00:05 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:07:29 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:12:19 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:16:35 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:16:35 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 175
+[12-Feb-2025 01:37:40 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 01:37:40 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 01:38:12 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 01:38:12 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 01:41:16 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 160
+[12-Feb-2025 01:41:16 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 186
+[12-Feb-2025 01:41:59 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 160
+[12-Feb-2025 01:41:59 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 186
+[12-Feb-2025 01:44:28 UTC] PHP Parse error:  syntax error, unexpected token "--" in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 159
+[12-Feb-2025 01:44:34 UTC] PHP Parse error:  syntax error, unexpected token "--" in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 159
+[12-Feb-2025 01:45:12 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 168
+[12-Feb-2025 01:45:34 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 168
+[12-Feb-2025 01:47:57 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 168
+[12-Feb-2025 01:48:54 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 168
+[12-Feb-2025 01:52:06 UTC] PHP Parse error:  syntax error, unexpected token "catch" in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 75
+[12-Feb-2025 01:52:15 UTC] PHP Parse error:  syntax error, unexpected token "catch" in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 75
+[12-Feb-2025 01:58:15 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 01:58:15 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:25:09 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:25:09 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:27:10 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:27:10 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:27:20 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:27:20 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:35:56 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:35:56 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:36:39 UTC] PHP Warning:  Undefined variable $allImages in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:36:39 UTC] PHP Warning:  Attempt to read property "num_rows" on null in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 02:56:46 UTC] PHP Warning:  Undefined property: PDOStatement::$num_rows in /home/affiadmin/public_html/a1db/a1db-v2/file.php on line 181
+[12-Feb-2025 03:24:35 UTC] PHP Warning:  Undefined variable $conn in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 11
+[12-Feb-2025 03:24:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 11
+[12-Feb-2025 03:25:11 UTC] PHP Warning:  Undefined variable $conn in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 11
+[12-Feb-2025 03:25:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 11
+[12-Feb-2025 03:27:24 UTC] PHP Warning:  Undefined variable $conn in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 14
+[12-Feb-2025 03:27:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 14
+[12-Feb-2025 04:23:23 UTC] PHP Parse error:  Unclosed '{' on line 10 in /home/affiadmin/public_html/a1db/a1db-v2/img_list.php on line 93
