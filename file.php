@@ -152,8 +152,28 @@ $processedImages = $pdo->query("SELECT * FROM images WHERE processed_image_url I
 </head>
 
 <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #B9F3FC;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">a1 DB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                        <a class="nav-link" href="index.html">Image View</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="file.php">Image Upload</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <h1>a1 DB Image Management</h1> 
+        <h1>Image Upload</h1> 
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
@@ -162,7 +182,7 @@ $processedImages = $pdo->query("SELECT * FROM images WHERE processed_image_url I
             <li class="nav-item">
                 <a class="nav-link" id="processed-tab" data-bs-toggle="tab" href="#processed" role="tab" aria-controls="processed" aria-selected="false">Processed Images</a>
             </li>
-            <li><a href="index.html" class="btn btn-primary">Image List</a></li>
+        
         </ul>
 
         <div class="tab-content" id="myTabContent">
