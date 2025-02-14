@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload/Download</title>
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
+    <style>
+        .gallery-item {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Image Management</h1>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="raw-tab" data-bs-toggle="tab" href="#raw" role="tab" aria-controls="raw"
+                    aria-selected="true">Raw Images</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="processed-tab" data-bs-toggle="tab" href="#processed" role="tab"
+                    aria-controls="processed" aria-selected="false">Processed Images</a>
+            </li>
+            <li><a href="index.html" class="btn btn-primary">Image List</a></li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="raw" role="tabpanel" aria-labelledby="raw-tab">
+                <h2>Upload Raw Image</h2>
+                <input type="file" name="image" id="rawImage">
+                <input type="text" name="tags" placeholder="Enter tags (comma-separated)" id="rawTags"><br><br>
+                <input type="textarea" name="description" placeholder="Enter description" id="rawDescription">
+                <button type="button" id="uploadRawButton" class="btn btn-primary">Upload Raw Image</button>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="processed" role="tabpanel" aria-labelledby="processed-tab">
+                <h2>Processed Images</h2>
+                <div class="row">
+                    <input type="number" name="image_id" placeholder="Enter Image ID" id="processedImageId"
+                        required><br><br>
+                    <input type="file" name="image" id="processedImage" required><br><br>
+                    <button type="button" id="uploadProcessedButton" class="btn btn-primary">Upload Processed
+                        Image</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Raw Image Upload
+            document.getElementById('uploadRawButton').addEventListener('click', function() {
+                const file = document.getElementById('rawImage').files[0];
+                const tags = document.getElementById('rawTags').value;
+                const description = document.getElementById('rawDescription').value;
+
+                const formData = new FormData();
+                formData.append('image', file);
+                formData.append('tags', tags);
+                formData.append('description', description);
+                formData.append('type', 'raw'); // Important: Add the 'type'
+
+                fetch('file_uploadAPI.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(err => {throw new Error(err || "Upload failed")});
+                    }
+                    return response.text(); // or response.json() if your PHP returns JSON
+                })
+                .then(message => {
+                    console.log('Response (Raw):', message);
+                    alert(message);
+                })
+                .catch(error => {
+                    console.error('Error (Raw):', error);
+                    alert("An error occurred during raw image upload: " + error.message); // More user-friendly message
+                });
+            });
+
+            // Processed Image Upload
+            document.getElementById('uploadProcessedButton').addEventListener('click', function() {
+                const imageId = document.getElementById('processedImageId').value;
+                const file = document.getElementById('processedImage').files[0];
+
+                const formData = new FormData();
+                formData.append('image', file);
+                formData.append('image_id', imageId);
+                formData.append('type', 'processed'); // Important: Add the 'type'
+
+                fetch('file_uploadAPI.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                   if (!response.ok) {
+                        return response.text().then(err => {throw new Error(err || "Upload failed")});
+                    }
+                    return response.text(); // or response.json() if your PHP returns JSON
+                })
+                .then(message => {
+                    console.log('Response (Processed):', message);
+                    alert(message);
+                })
+                .catch(error => {
+                    console.error('Error (Processed):', error);
+                    alert("An error occurred during processed image upload: " + error.message);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

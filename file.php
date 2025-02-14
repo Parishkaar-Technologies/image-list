@@ -1,4 +1,5 @@
 <?php
+
 include 'db_connect.php'; // Include the connection
 
 // uncomment the below for error log
@@ -15,14 +16,13 @@ function uploadImage($pdo, $imageType)
         } else {
             $targetDir = "processed_images/"; // Processed image directory (relative path)
         }
-
         $fileName = basename($_FILES["image"]["name"]);
         $targetFile = $targetDir . $fileName;
+        
 
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-        // ... (file type and size checks remain the same) ...
 
         if ($uploadOk == 0) {
 
@@ -35,11 +35,37 @@ function uploadImage($pdo, $imageType)
                     if ($imageType == "raw") {
                         
                         
-                        $stmt = $pdo->prepare("INSERT INTO images (unprocessed_image_url, raw_upload_date) VALUES (?, NOW())");
-                        $stmt->execute([$targetFile]);
+                        $description = explode(",", $_POST['description']);
+                            foreach ($description as $description) {
+                                $description = trim($description);
+                                $descriptionStmt = $pdo->prepare("SELECT description FROM images WHERE description = ?");
+                        
+                        
+                        $stmt = $pdo->prepare("INSERT INTO images (unprocessed_image_url, raw_upload_date, description) VALUES (?, NOW(), ?)");
+                        $stmt->execute([$targetFile, $description]);
 
                         $imageId = $pdo->lastInsertId();
+                        
+                        // if (isset($_POST['description'])) {
+                        //     // $description = explode(",", $_POST['description']);
+                        //     // foreach ($description as $description) {
+                        //     //     $description = trim($description);
+                        //     //     $descriptionStmt = $pdo->prepare("SELECT description FROM images WHERE description = ?");
+                        //         $descriptionStmt->execute([$description]);
+                        //         $descriptionResult = $descriptionStmt->fetch(PDO::FETCH_ASSOC);
 
+                        //       if ($descriptionResult) {
+                        //             $descriptionId = $descriptionResult['description'];
+                        //         } else {
+                        //             $insertdescriptionStmt = $pdo->prepare("INSERT INTO images (description) VALUES (?)");
+                        //             $insertdescriptionStmt->execute([$description]);
+                        //             // $descriptionId = $pdo->lastInsertId();
+                        //         }
+                        //         // $imgdescriptionStmt = $pdo->prepare("INSERT INTO images (description) VALUES (?)");
+                        //         // $imgdescriptionStmt->execute([$descriptionId]);
+                        //     }
+                        }
+                        
                         // Handle tags
                         if (isset($_POST['tags'])) {
                             $tags = explode(",", $_POST['tags']);
@@ -60,6 +86,9 @@ function uploadImage($pdo, $imageType)
                                 $imgTagStmt->execute([$imageId, $tagId]);
                             }
                         }
+                        
+                        
+                        
                         
 
                     } else { // processed
@@ -103,7 +132,23 @@ $processedImages = $pdo->query("SELECT * FROM images WHERE processed_image_url I
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Upload/Download</title>
     <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
-    
+    <style>
+        .gallery-item {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
@@ -126,7 +171,7 @@ $processedImages = $pdo->query("SELECT * FROM images WHERE processed_image_url I
                 <form method="post" enctype="multipart/form-data">
                     <input type="file" name="image" id="image">
                     <input type="text" name="tags" placeholder="Enter tags (comma-separated)"><br><br>
-                    <input type= "textarea" name="descriptions" placeholder="Enter description">
+                    <input type= "textarea" name="description" placeholder="Enter description">
                     <input type="submit" name="uploadRaw" value="Upload Raw Image" class="btn btn-primary">
                 </form>
                 <hr>
