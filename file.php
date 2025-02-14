@@ -107,7 +107,6 @@ $processedImages = $pdo->query("SELECT * FROM images WHERE processed_image_url I
 </head>
 
 <body>
-
     <div class="container">
         <h1>Image Management</h1> 
 

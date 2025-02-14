@@ -4,114 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    body{
-        background-color:#C8E8ED;
-    }
-    .table-bg{
-        width: 100%;
-    border-collapse: collapse;
-    background-color: #E5E1DA;
-    color: #ac3737;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    }
-    .head{
-        text-align:center;
-    }
+        body {
+            background-color: #fefefe;
+        }
+        .table-bg {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #E5E1DA;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .head {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1 class="head">Image List</h1>
-    <table class="table table-bordered table-hover table-bg" id="imageTable">
-        <thead>
-            <tr></tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #B9F3FC;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Image Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://localhost/a1db-v2-sahasrini/file.php">Image Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/a1db-v2-sahasrini/">Image View</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search table">
+                </form>
+            </div>
+        </div>
+    </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('img_list.php') // Fetch from the PHP file
-            .then(response => {
-                if (!response.ok) { // Check for HTTP errors
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-                if (data.error) { // Check for errors returned by the PHP script\
-                    console.error('PHP Error:', data.error);
-                    const table = document.getElementById('imageTable');
-                    const tbody = table.querySelector('tbody');
-                    const row = tbody.insertRow();
-                    const cell = row.insertCell();
-                    cell.textContent = "Error fetching data: " + data.error;
-                    return; // Stop processing
-                }
+    <div class="container">
+        
+        <table class="table table-bordered table-hover table-bg" id="imageTable">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-                const table = document.getElementById('imageTable');
-                const thead = table.querySelector('thead tr');
-                const tbody = table.querySelector('tbody');
-                
-
-                if (data.length > 0) {
-                const headers = Object.keys(data[0]);
-                console.log(Object.keys(data[0]));
-                
-                headers.forEach(headerText => {
-                    const th = document.createElement('th');
-                    th.textContent = headerText;
-                    th.style.height = "50px";
-                    th.style.padding = "5px";
-                    thead.appendChild(th);
-                });
-
-                data.forEach(item => {
-                    const row = tbody.insertRow();
-                    row.style.border = "1px solid #ffffff";
-                    row.style.height = "150px";
-
-                    headers.forEach(header => {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('img_list.php')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    if (data.error) {
+                        console.error('PHP Error:', data.error);
+                        const table = document.getElementById('imageTable');
+                        const tbody = table.querySelector('tbody');
+                        const row = tbody.insertRow();
                         const cell = row.insertCell();
-                        cell.style.textAlign = "center";
+                        cell.textContent = "Error fetching data: " + data.error;
+                        return;
+                    }
 
-                        if ((header === "unprocessed_image_url") || (header === "processed_image_url")) {
-                            const linkImg = document.createElement("a");
-                            linkImg.href = item[header]; 
-                            linkImg.target = "_blank";
-                            
-                            const thumbnail = document.createElement("img");
-                            thumbnail.src = item[header]; // Set image source
-                            
-                            thumbnail.style.width = "30%"; // Set thumbnail size
-                            thumbnail.style.marginRight = "20px"; 
-                            linkImg.appendChild(thumbnail);
-                            
-                            cell.appendChild(linkImg);
-                            
-                        } else {
-                            // Normal text for other fields
-                            cell.textContent = item[header];
-                        }
-                    });
+                    const table = document.getElementById('imageTable');
+                    const thead = table.querySelector('thead tr');
+                    const tbody = table.querySelector('tbody');
+
+                    if (data.length > 0) {
+                        const headers = Object.keys(data[0]);
+                        console.log(Object.keys(data[0]));
+                        
+                        headers.forEach(headerText => {
+                            const th = document.createElement('th');
+                            th.textContent = headerText;
+                            th.style.height = "50px";
+                            th.style.padding = "5px";
+                            thead.appendChild(th);
+                        });
+
+                        data.forEach(item => {
+                            const row = tbody.insertRow();
+                            row.style.border = "1px solid #FBFFE4";
+                            row.style.height = "150px";
+
+                            headers.forEach(header => {
+                                const cell = row.insertCell();
+                                cell.style.textAlign = "center";
+
+                                if ((header === "unprocessed_image_url") || (header === "processed_image_url")) {
+                                    if (item[header] && item[header].trim() !== "") {
+                                        const linkImg = document.createElement("a");
+                                        linkImg.href = item[header];
+                                        linkImg.target = "_blank";
+
+                                        const thumbnail = document.createElement("img");
+                                        thumbnail.src = item[header];
+                                        thumbnail.style.width = "30%";
+                                        thumbnail.style.marginRight = "20px";
+
+                                        linkImg.appendChild(thumbnail);
+                                        cell.appendChild(linkImg);
+                                    } else {
+                                        cell.textContent = "No Image Available";
+                                        cell.style.color = "gray";
+                                        cell.style.fontStyle = "italic";
+                                    }
+                                } else {
+                                    cell.textContent = item[header];
+                                }
+                            });
+                        });
+                    } else {
+                        const row = tbody.insertRow();
+                        const cell = row.insertCell();
+                        cell.textContent = "No data found.";
+                    }
+                })
+                .catch(error => console.error('Fetch Error:', error));
+
+            // Search functionality
+            document.getElementById("searchInput").addEventListener("input", function () {
+                let filter = this.value.toLowerCase();
+                let rows = document.querySelectorAll("#imageTable tbody tr");
+
+                rows.forEach(row => {
+                    let text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(filter) ? "" : "none";
                 });
-            } else {
-                const row = tbody.insertRow();
-                const cell = row.insertCell();
-                cell.textContent = "No data found.";
-            }
-        })
-        .catch(error => console.error('Fetch Error:', error));
-    });
-</script>
+            });
+        });
+    </script>
 
 </body>
 </html>
